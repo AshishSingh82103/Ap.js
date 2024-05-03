@@ -28,7 +28,7 @@
 let a = null;
 console.log(typeof a); // object
 
-// ----Nonprimitve => objcet-------
+// ----Non-primitve data types => objcet-------
 const student = {
     name: "rahul",
     age: 20,
