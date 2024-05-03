@@ -1,1 +1,44 @@
-console.log("Ashish Singh");
+// variable can be redeclare and update.A global scope variable
+// var a = 24;
+// var a = 58;
+// console.log(a); // 58
+
+// variable can not be redecalre but update the value . A block scope variable
+// let a = 24;
+// // update the value
+// a = 25;
+// console.log(a); // 25
+
+//variable can not be redecalre and update. A block scope variable
+// const age = 35;
+// age = 46;
+// console.log(age); // TypeError: Assignment to constant variable.
+
+
+// let a;
+// console.log(a); // undefined
+// a = 10;
+// console.log(a); // 10
+
+// const a;
+// console.log(a);  // SyntaxError: Identifier 'a' has already been declared
+
+// Data type in js
+// Number, String, Boolean, Undefined, Null, Bigint, Symbol <= these are primitive data types they are total 7 types
+let a = null;
+console.log(typeof a); // object
+
+// ----Nonprimitve => objcet-------
+const student = {
+    name: "rahul",
+    age: 20,
+    cgpa: 8.2,
+    isPass: true,
+};
+student["name"] = 'rahul shrma';
+console.log(student["name"]); // rahul shrma
+student["age"] = student["age"] + 1;
+// console.log(student["age"]);
+console.log(student["age"]);
+
+console.log(student.cgpa);
