@@ -134,7 +134,34 @@ console.log(items);
 // console.log(marvel_heroes.slice());
 
 // splice() : change orignal  array ( add, remove, replace)
-splice(start index, deleteCount, newEl);
+// splice(start index, deleteCount, newEl);
+
+// let arr = [23, 56, 78, 90];
+// arr.splice(2, 2, 101, 103);
+// console.log(arr);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+// Result: ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+
+// Q : 1=> let's create array  to store the compineis -> "Bloomberg", "Microsoft", "uber", "google", "ibm", "netflix", 
+// a : Remove the first company from the Array
+// b : remove uber & Add ola  in its Palce 
+// c : Add amazon at the end
+
+let arr = ["Bloomberg", "Microsoft", "uber", "google", "ibm", "netflix"];
+// arr.shift();
+// console.log(arr);
+
+// arr.splice(2, 1, "ola");
+// console.log(arr);
+
+arr.push("amazon");
+console.log(arr);
+
+
+
+
 
 
 
