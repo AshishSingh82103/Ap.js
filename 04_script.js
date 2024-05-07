@@ -62,7 +62,85 @@ for(let i = 0; i < marks.length; i++) {
     sum += marks[i];
 }
 let average = sum / marks.length;
-console.log(average);
-console.log(sum); // 399
+// console.log(average);
+// console.log(sum); // 399
+
+// Q:2 => for a given array with prices of 5 items -> [250, 645, 300, 900, 50] all items have an offer of 10% off them. Change the array to store final price after applying offer.
+
+let items = [250, 645, 300, 900, 50];
+let index = 0;
+// for( let val of items) {
+//     // console.log(`value at index ${index} = ${val}`);
+//     let offer = val / 10;
+//     items[index] = items[index] - offer;
+//     console.log(`value of offer = ${items[index]}`);
+//     index++;
+// }
+
+for ( let i = 0; i < items.length; i++) {
+    let offer = items[i] / 10;
+    items[i] = items[i] - offer;
+}
+console.log(items);
+
+//  ---------Array methods-------
+
+// push() : add to end
+
+// let veggie = ["potato", "Bringle", "LadyFinger", "Tamato"];
+// veggie.push("cully-flower")
+// console.log(veggie);
+
+// pop() : delete from end & return
+
+// let veggie = ["potato", "Bringle", "LadyFinger", "Tamato"];
+// console.log(veggie)
+// let deleted = veggie.pop();
+// console.log(veggie);
+// console.log("deleted =", deleted); // deleted = Tamato
+
+// tostring : to convert a array in string
+
+// let veggie = ["potato", "Bringle", "LadyFinger", "Tamato"];
+// console.log(veggie);
+// console.log(veggie.toString());
+
+// let marks1 = [97, 78, 83, 46];
+// console.log(marks1.toString());
+
+// let marvel_heroes = ["thor", "Spiderman", "iorn-man"];
+// let dc_heroes = ["batman", "superman", "flash"];
+// let indi_heores = ["shaktiman", "krish"]
+
+// let heroes  = marvel_heroes.concat(dc_heroes, indi_heores);
+// console.log(heroes);
+
+// ----Unshift method unshift() : add to start => push-----
+// let marvel_heroes = ["thor", "Spiderman", "iorn-man"];
+// marvel_heroes.unshift("Antman");
+// console.log(marvel_heroes);
+
+// ---shift() : 
+// let marvel_heroes = ["thor", "Spiderman", "iorn-man"];
+//  let del = marvel_heroes.shift();
+// console.log(marvel_heroes);
+// console.log(del); // thor
+
+// ------------Slice() : returns a piece of the array not change in orignal array 
+// eg: - slice(startindex, end index);
+
+// let marvel_heroes = ["thor", "Spiderman", "iorn-man", "Antman", "hulk"];
+// console.log(marvel_heroes);
+// console.log(marvel_heroes.slice());
+
+// splice() : change orignal  array ( add, remove, replace)
+splice(start index, deleteCount, newEl);
+
+
+
+
+
+
+
 
 
