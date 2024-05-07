@@ -101,9 +101,91 @@
 
 // Q: 3 => Creat a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters coorect value.
 
-let gameNum = 25;
-let userNum = prompt("Guess the game Number : ");
-while(userNum != gameNum) {
-     userNum = prompt("you entered wrong number. Guess again : ");
-}
-console.log("Congartulaions you enterd the right number");
+// let gameNum = 25;
+// let userNum = prompt("Guess the game Number : ");
+// while(userNum != gameNum) {
+//      userNum = prompt("you entered wrong number. Guess again : ");
+// }
+// console.log("Congartulaions you enterd the right number");
+
+// -----String-------------
+// let str = "accountId";
+// let str1 = 'newlyseup';
+
+// string length
+// console.log(str.length); // 9
+// console.log(str1.length); // 9
+
+// string indices or index => cahracter postion
+// str[0], str[1], str[2]
+
+// console.log(str[2]); // c
+// console.log(str1[1]); // e
+
+// Template litireals (string-interpolation)
+// let multiLine = `This is a multi-line string.
+// It spans across multiple lines.`
+// console.log(typeof multiLine); // string
+
+// let obj = {
+//     item: "boundryLine",
+//     price: "5usd$",
+// };
+// console.log("The cost of obj", obj.item, "is", obj.price);
+// // or
+// console.log(`the cost of obj ${obj.item} is ${obj.price}`);
+
+// console.log("Ashish\nSingh"); // print the next line
+// console.log("Ashish\tSingh"); // print the tab space
+
+// let str = "Ashish\tSingh";
+// console.log(str.length); // 12
+
+//  ----------String method(is like block of code which used to work for me) in JS--------
+// ---toUpperCase()
+// let str = "abc";
+// console.log(str.toUpperCase()); // ABC
+
+// toLowerCase
+// let str1 = "ASHSIH SINGH";
+// console.log(str1.toLowerCase());
+
+// trim starting and end to trin the white space
+// let str2 = "   ashish singh ";
+// console.log(str2.trim());
+
+// Slice(str.slicr(star, end)) // returns part of the string
+
+// let str = "0123456";
+// console.log(str.slice(1, 3)); // 12
+
+// string concat str1.concat(str2) joins str2 with str1
+
+// let str1 = "apna";
+// let str2 = "collage";
+// let result = str1.concat(str2);
+// console.log(result); // apnacollage
+
+// replace method str.replace(searchVal, newVal)
+
+// let str = "hello";
+// // console.log(str.replace("h", "y")); // y
+// console.log(str.replace("lo", "p")); // help
+
+// let str = "hellololo";
+// console.log(str.replaceAll("lo", "p")); // helppp
+
+// cahracter method charAt(index)
+
+// let str = "IloveJS";
+// console.log(str.charAt(0)); // I
+
+
+
+
+
+
+
+
+
+
