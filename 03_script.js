@@ -180,6 +180,16 @@
 // let str = "IloveJS";
 // console.log(str.charAt(0)); // I
 
+// Q: 1 =>  prompt the user to enter thier full name. Genrate a username for them based on the input. start username with @, followed by their full nameand ending with the fullnam length  eg. user name = "ashishsingh", username should be "@ashsihsingh13"
+
+//  let fullName= prompt('Enter your full name without spaces');
+//  let firstAdd = "@";
+//  let nameConcat = firstAdd.concat(fullName);
+//  let result = nameConcat + fullName.length;
+//  console.log(result);
+
+
+
 
 
 
