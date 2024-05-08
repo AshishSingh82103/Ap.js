@@ -157,7 +157,7 @@ let arr = ["Bloomberg", "Microsoft", "uber", "google", "ibm", "netflix"];
 // console.log(arr);
 
 // arr.push("amazon");
-// console.log(arr);
+console.log(arr);
 
 
 
