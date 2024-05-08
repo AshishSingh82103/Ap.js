@@ -156,8 +156,8 @@ let arr = ["Bloomberg", "Microsoft", "uber", "google", "ibm", "netflix"];
 // arr.splice(2, 1, "ola");
 // console.log(arr);
 
-arr.push("amazon");
-console.log(arr);
+// arr.push("amazon");
+// console.log(arr);
 
 
 
