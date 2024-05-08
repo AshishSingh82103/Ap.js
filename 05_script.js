@@ -224,7 +224,7 @@ console.log(finalAns);
     return accumulator * currentValue;
  })
 
- console.log(vauleMulti);
+ console.log(vauleMulti)
 
 
 
