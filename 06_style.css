@@ -1,0 +1,17 @@
+body {
+    background: pink;
+    
+}
+/* #heading {
+    color: blue;
+    background-color: yellow;
+} */
+.heading-class {
+    color: blue;
+    background-color: yellow;
+}
+
+button {
+    background-color: blue;
+    color: white;
+}
