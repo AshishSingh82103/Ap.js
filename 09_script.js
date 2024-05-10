@@ -50,26 +50,66 @@
 //     console.log(event.clientX, event.clientY); 
 // }
 
-// ----------Event-Listner----------
+// ---------- add Event-Listner----------
+// let btn1 = document.querySelector("#btn1");
+// btn1.addEventListener('click', (event) => {
+//     console.log("Button was clicked");
+//     console.log(event);
+//     console.log(event.type);
+//     console.log(event.target);
+//     console.log(event.clientX, event.clientY);
+// })
+
+// let btn2 = document.querySelector("#btn2");
+// btn2.addEventListener('click', (event) => {
+//     console.log("Buttun was doubled clicked");
+//     console.log(event);
+//     console.log(event.type);
+//     console.log(event.target);
+//     console.log(event.clientX, event.clientY);
+// })
+
+
+// ---------remove event listner------------------
 let btn1 = document.querySelector("#btn1");
-btn1.addEventListener('click', (event) => {
-    console.log("Button was clicked");
-    console.log(event);
-    console.log(event.type);
-    console.log(event.target);
-    console.log(event.clientX, event.clientY);
+
+btn1.addEventListener('click', () => {
+    console.log("buttun was clicked - hander1");
 })
 
-let btn2 = document.querySelector("#btn2");
-btn2.addEventListener('click', (event) => {
-    console.log("Buttun was doubled clicked");
-    console.log(event);
-    console.log(event.type);
-    console.log(event.target);
-    console.log(event.clientX, event.clientY);
+btn1.addEventListener('click', () => {
+    console.log("buttun was clicked - hander2");
 })
 
+const handler3 = () => {
+    console.log("buttun was clicked - hander3");
+}
+btn1.addEventListener('click', handler3);
 
+btn1.removeEventListener('click', handler3);
+    
 
+btn1.addEventListener('click', () => {
+    console.log("buttun was clicked - hander4");
+})
 
+btn1.removeEventListener('click',()=>{
+    console.log("buttun was clicked - hander3");
+})
+
+// Qs : create a toggle buttun that changes the screen to dark-mode when clicked & light-mode when clicked again.
+// toggle => suffer between two state one to reach another point after then reached to starting point
+
+let modebtn = document.querySelector("#mode");
+let currMode = "light";
+modebtn.addEventListener('click', () => {
+    if(currMode === "light") {
+        currMode = "dark";
+        document.querySelector("body").style.backgroundColor = "black";
+    } else {
+        currMode = "light";
+        document.querySelector("body").style.backgroundColor = "pink";
+    }
+    console.log(currMode);
+})
 
