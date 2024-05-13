@@ -153,6 +153,43 @@ class Doctor extends Person {
  console.log(devndraObj.sleep());
  console.log(devndraObj.work()); //Treat patient (child class invoked)
 
+//  let p1 = new Person();
+//  console.log(p1);
+
+let e1 = new Engineer();
+console.log(e1); // Engineer { sepices: 'homo sapiens' } final output through out the browser
+
+// ------------Super keyword------------
+
+// The super keyword is used to call thte constructor of its parent class acess to the parent's properties and method.
+
+class Person1 {
+    constructor () {
+        console.log("Enter parent constructor");
+        this.sepices = "homo sepines";
+    }
+    eat() {
+        console.log(eat);
+    }
+}
+
+class Engineer1 extends Person1{
+    constructor(branch) {
+        console.log("enter child consturctor");
+        super(); // to invoke parent class consturctor
+        this.branch = branch;
+        console.log("exit child consturctor");
+    }
+    work() {
+        console.log("Solve the problem, build something");
+    }
+}
+
+
+
+let engObj = new Engineer1("chemical-engg");
+
+
 
 
 
