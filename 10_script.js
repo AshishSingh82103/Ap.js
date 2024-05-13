@@ -77,9 +77,10 @@
 // constructor() method is : a. automatically invoked by new. b. intializes objects
 
 class toyotaCar {
-    constructor(brand) {
+    constructor(brand, mileage) {
         console.log("Creating new objects");
         this.brand = brand;
+        this.mileage = mileage;
     }
     start() {
         console.log("start");
@@ -95,8 +96,66 @@ class toyotaCar {
     // }
 }
 
-let fortuner = new toyotaCar("fortuner"); // constructor
-let lexus = new toyotaCar("lexus"); // consturctor
+let fortuner = new toyotaCar("fortuner", 10); // constructor
+console.log(fortuner);
+
+let lexus = new toyotaCar("lexus", 20); // consturctor
+console.log(lexus);
+
+// ------------Inheritance----------------
+// Inheritance is passing down properties & methods from parent class to child class
+
+// ** if chlid & parent have same method, child's method will be used. [Method overriding]
+
+class Parent {
+    
+    hello () {
+        console.log("hello");
+    }
+}
+
+class Child extends Parent {};
+let obj =  new Child();
+
+// -----------another--------------
+
+class Person {
+    constructor() {
+        this.sepices = "homo sapiens"
+    }
+    eat()  {
+        console.log("eat");
+    }
+    sleep() {
+        console.log("sleep");
+    }
+    work () {
+        console.log("Do nothing");
+    }
+
+}
+
+class Engineer extends Person {
+    work() {
+        console.log("Solve problems, build something")
+    }
+}
+
+class Doctor extends Person {
+    work() {
+        console.log("Treat patient")
+    }
+}
+ let ashishObj = new Engineer();
+ console.log(ashishObj.eat());
+
+ let devndraObj = new Doctor();
+ console.log(devndraObj.sleep());
+ console.log(devndraObj.work()); //Treat patient (child class invoked)
+
+
+
+
  
 
 
