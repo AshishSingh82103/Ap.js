@@ -163,31 +163,112 @@ console.log(e1); // Engineer { sepices: 'homo sapiens' } final output through ou
 
 // The super keyword is used to call thte constructor of its parent class acess to the parent's properties and method.
 
+// class Person1 {
+//     constructor (name) {
+//         console.log("Enter parent constructor");
+//         this.sepices = "homo sepines";
+//         this.name = name;
+//     }
+//     eat() {
+//         console.log(eat);
+//     }
+// }
+
+// class Engineer1 extends Person1{
+//     constructor(branch) {
+//         console.log("enter child consturctor");
+//         super(); // to invoke parent class consturctor
+//         this.branch = branch;
+//         console.log("exit child consturctor");
+//     }
+//     work() {
+//         console.log("Solve the problem, build something");
+//     }
+// }
+
+// let engObj = new Engineer1("chemical-engg");
+
+// ------Another thing to do---------------
+
 class Person1 {
-    constructor () {
-        console.log("Enter parent constructor");
+    constructor (name) {
         this.sepices = "homo sepines";
+        this.name = name;
     }
     eat() {
-        console.log(eat);
+        console.log("eat");
     }
 }
 
 class Engineer1 extends Person1{
-    constructor(branch) {
-        console.log("enter child consturctor");
-        super(); // to invoke parent class consturctor
-        this.branch = branch;
-        console.log("exit child consturctor");
+    constructor(name) {
+        super(name); // to invoke parent class consturctor
+       
     }
     work() {
+        super.eat();
         console.log("Solve the problem, build something");
     }
 }
 
+let engObj = new Engineer1("Ashish");
+console.log(engObj.work());
+
+// QS : you are creating a website for your college. create a class user with 2 properties, name & email.It also has a method callled wiew data() that allows user to view data.
+
+// let data = "Secerte Information";
+// class User {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+//     viewData() {
+//         console.log("Data = ", data);
+//     }
+// }
+
+// let client1 = new User("Ashish", "singhashish82103@gmail.com");
+// let client2 = new User("Anurag", 'anurag18tcs@gmail.com');
+
+// console.log(client1);
+// console.log(client1.viewData());
+
+// QS : create a new class called admin which inherits from user. Add a new method called edit data to admin allows it to edit the website data.
+
+let Data = "Secerte Information";
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    viewData() {
+        console.log("Data = ", Data);
+    }
+}
+
+class Admin extends User {
+    constructor(name, email) {
+        super(name, email);
+    }
+    editData() {
+        Data = "Some new value";
+    }
+}
+
+let client1 = new User("Ashish", "singhashish82103@gmail.com");
+let client2 = new User("Anurag", 'anurag18tcs@gmail.com');
+let admin1 = new Admin("admin", "adminsomething@gmail.com");
+
+console.log(client1);
+console.log(client1.viewData());
 
 
-let engObj = new Engineer1("chemical-engg");
+
+
+
+
+
+
 
 
 
