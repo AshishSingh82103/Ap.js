@@ -219,6 +219,55 @@
 //     });
 // });
 
+// ---Promise chain best way to write the promise chain----------
+// function getData(dataID) {
+//     return new Promise((resolve, reject) =>{
+//        setTimeout(()=>{
+//            console.log("data", dataID);
+//            resolve("Success");
+//        },3000);
+
+//    });
+
+// }
+
+// ---Promise chain best way to write the promise chain----------
+// console.log("getting data1....");
+// getData(1)
+// .then((res) => {
+//     console.log("getting data2....");
+//     return getData(2);
+// })
+// .then((res)=> {
+//     console.log("getting data3....");
+//     return getData(3)
+// })
+// .then((res) => {
+//     console.log(res);
+// })
+
+// -----------Async = it is always return a promise-----------
+//  async function hello () {
+//     console.log("hello");
+// }
+// hello(); // async is always return to promise
+
+// await = await pauses the execution of its surroundings async function until the promise is settled.
+// function api () {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             console.log("Weather data");
+//             resolve(200);
+//         },2000);
+     
+//     });
+// }
+
+// async function getWeatherData() {
+//     await api(); // 1st call
+//     await api(); // 2st call
+// }
+// getWeatherData();
 
 function getData(dataID) {
     return new Promise((resolve, reject) =>{
@@ -231,17 +280,21 @@ function getData(dataID) {
 
 }
 
-// ---Promise chain best way to write the promise chain----------
-getData(1)
-.then((res) => {
-    return getData(2);
-})
-.then((res)=> {
-    return getData(3)
-})
-.then((res) => {
-    console.log(res);
-})
+// Async await
+async function getAllData() {
+    console.log("getting data 1....");
+    await getData(1);
+    console.log("getting data 2....");
+    await getData(2);
+    console.log("getting data 3....");
+    await getData(3);
+    console.log("getting data 4....");
+    await getData(4);
+    console.log("getting data 5....");
+    await getData(5);
+}
+console.log(getAllData());
+
 
 
 
