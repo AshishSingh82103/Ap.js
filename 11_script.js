@@ -269,6 +269,37 @@
 // }
 // getWeatherData();
 
+
+// function getData(dataID) {
+//     return new Promise((resolve, reject) =>{
+//        setTimeout(()=>{
+//            console.log("data", dataID);
+//            resolve("Success");
+//        },3000);
+
+//    });
+
+// }
+
+// // Async await
+// async function getAllData() {
+//     console.log("getting data 1....");
+//     await getData(1);
+//     console.log("getting data 2....");
+//     await getData(2);
+//     console.log("getting data 3....");
+//     await getData(3);
+//     console.log("getting data 4....");
+//     await getData(4);
+//     console.log("getting data 5....");
+//     await getData(5);
+// }
+// console.log(getAllData());
+
+
+
+// IIFE(imidiate invoked function Expression)
+
 function getData(dataID) {
     return new Promise((resolve, reject) =>{
        setTimeout(()=>{
@@ -280,8 +311,8 @@ function getData(dataID) {
 
 }
 
-// Async await
-async function getAllData() {
+// Async await IIFE
+(async function () {
     console.log("getting data 1....");
     await getData(1);
     console.log("getting data 2....");
@@ -292,10 +323,7 @@ async function getAllData() {
     await getData(4);
     console.log("getting data 5....");
     await getData(5);
-}
-console.log(getAllData());
-
-
+})();
 
 
 
