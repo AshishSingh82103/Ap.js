@@ -109,19 +109,20 @@
 // });
 
 // in genral programming api return to data
-function getData(dataID, getNextData) {
-     return new Promise((resolve, reject) =>{
-        setTimeout(()=>{
-            console.log("data", dataID);
-            resolve("Sucess");
-            if(getNextData) {
-                getNextData();
-            }
-        },5000);
 
-    })
+// function getData(dataID, getNextData) {
+//      return new Promise((resolve, reject) =>{
+//         setTimeout(()=>{
+//             console.log("data", dataID);
+//             resolve("Sucess");
+//             if(getNextData) {
+//                 getNextData();
+//             }
+//         },5000);
 
-}
+//     })
+
+// }
 // this console do on browser to see the reuslt
 // before using resolve promise is pending
 
@@ -133,29 +134,120 @@ function getData(dataID, getNextData) {
 // let finalValue = getData(123);
 // console.log(finalValue);
 
-function getData1(dataID, getNextData) {
-    return new Promise((resolve, reject) =>{
-       setTimeout(()=>{
-           console.log("data", dataID);
-           reject("Error");
-           if(getNextData) {
-               getNextData();
-           }
-       },5000);
+// function getData1(dataID, getNextData) {
+//     return new Promise((resolve, reject) =>{
+//        setTimeout(()=>{
+//            console.log("data", dataID);
+//            reject("Error");
+//            if(getNextData) {
+//                getNextData();
+//            }
+//        },5000);
 
-   })
+//    })
 
-}
+// }
 
 // this console do on browser to see the reuslt
-let result = getData1(123);
-console.log(result);
+
+// let result = getData1(123);
+// console.log(result);
 
 // promise => .then() & .catch()
 
 // ----Sample---
 // promise.then((resolve) => {})
 // promise.then((reject) => {})
+
+
+// const getPromise = () => {
+//     return new Promise((resolve, reject) =>{
+//         console.log("I'm a promise");
+//         resolve("success");
+//         // reject("Some error occured");
+
+//     });
+// }
+// let promise = getPromise();
+// promise.then((res) => {
+//     console.log("promise fullfilled", res);
+// });
+
+// promise.catch((err)=>{
+//     console.log("rejected", err);
+// })
+
+// --------------Promise chain--------------
+// function asyncFunc1() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             console.log("data 1");
+//             resolve("success");
+//         }, 4000);
+//     });
+// }
+
+// function asyncFunc2() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(()=>{
+//             console.log("data 2");
+//             resolve("success");
+//         }, 4000);
+//     });
+// }
+
+// console.log("fetching data1.....");
+// let p1 = asyncFunc1();
+// p1.then((res) =>{
+//     console.log(res);
+//     console.log("fetching data2.....");
+//     let p2 = asyncFunc2();
+//     p2.then((res) =>{
+//         console.log(res);
+//     });
+// });
+
+// --------or---------
+// console.log("fetching data1.....");
+// asyncFunc1().
+// then((res) =>{
+//     console.log(res);
+//     console.log("fetching data2.....");
+//     asyncFunc2()
+//     .then((res) =>{
+//         console.log(res);
+//     });
+// });
+
+
+function getData(dataID) {
+    return new Promise((resolve, reject) =>{
+       setTimeout(()=>{
+           console.log("data", dataID);
+           resolve("Success");
+       },3000);
+
+   });
+
+}
+
+// ---Promise chain best way to write the promise chain----------
+getData(1)
+.then((res) => {
+    return getData(2);
+})
+.then((res)=> {
+    return getData(3)
+})
+.then((res) => {
+    console.log(res);
+})
+
+
+
+
+
+
 
 
 
